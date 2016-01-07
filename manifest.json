@@ -1,0 +1,26 @@
+{
+   "browser_action": {
+      "default_icon": "gre_icon.png",
+      "default_popup": "popup.html",
+      "default_title": "GRE words list highlighter"
+   },
+   "content_scripts": [ {
+     "matches": ["<all_urls>"],
+     "css": ["highlight.css"],
+     "js": [  "jquery.js" ,"jquery_highlight.js","content_script.js"  ],
+     "all_frames": true    
+   } ],
+   "description": "GRE Flash Cards on WebPages . ",
+   "icons": {
+      "256": "gre_icon.png",
+   },
+   "web_accessible_resources": [
+    "words.json",
+    "icons/*"
+    ],
+   "manifest_version": 2,
+   "name": "GRE Easy",
+   "permissions": [ "activeTab" , "tabs"],
+   "short_name": "GRE Easy",
+   "version": "1.0"
+} 
